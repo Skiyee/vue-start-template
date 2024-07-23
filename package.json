@@ -1,0 +1,67 @@
+{
+  "name": "vue-start-template",
+  "type": "module",
+  "version": "0.0.1",
+  "private": true,
+  "description": "用于 Vue 项目起步的模板",
+  "author": {
+    "name": "sKy",
+    "email": "319619193@qq.com"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/Skiyee/vue-start-template#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Skiyee/vue-start-template.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Skiyee/vue-start-template/issues"
+  },
+  "keywords": [
+    "utility-class",
+    "css",
+    "atomic-css",
+    "tailwind",
+    "unocss"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc -b && vite build",
+    "preview": "vite preview",
+    "prepare": "simple-git-hooks",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "dependencies": {
+    "vue": "^3.4.31",
+    "vue-router": "^4.4.0"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^2.23.1",
+    "@commitlint/cli": "^19.3.0",
+    "@commitlint/config-conventional": "^19.2.2",
+    "@types/node": "^20.14.11",
+    "@unocss/eslint-config": "^0.61.5",
+    "@vitejs/plugin-vue": "^5.0.5",
+    "@vue/tsconfig": "^0.5.1",
+    "eslint": "^9.7.0",
+    "lint-staged": "^15.2.7",
+    "simple-git-hooks": "^2.11.1",
+    "typescript": "^5.2.2",
+    "unocss": "^0.61.5",
+    "unplugin-auto-import": "^0.18.0",
+    "unplugin-vue-components": "^0.27.3",
+    "vite": "^5.3.4",
+    "vite-plugin-vue-devtools": "^7.3.6",
+    "vue-tsc": "^2.0.24"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged",
+    "commit-msg": "npx commitlint --edit ${1}"
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx,vue,md}": [
+      "eslint . --fix"
+    ]
+  }
+}
